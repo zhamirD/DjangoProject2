@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-hc=4nog2#60n=gul68r&ksbuoup=kf*%$fst(0la=r_t8%q+qw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["zhamird.pythonanywhere.com"]
 
 
 # Application definition
@@ -75,13 +75,13 @@ WSGI_APPLICATION = 'Paginaweb.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": "mydatabase",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 # DATABASES = {
 #     "default": {
-#         "ENGINE": "django.db.backends.postgresql",
-#         "NAME": "Hola",
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
 #         "USER": "postgres",
 #         "PASSWORD": "1234",
 #         "HOST": "127.0.0.1",
@@ -128,3 +128,4 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
